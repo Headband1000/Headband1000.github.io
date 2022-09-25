@@ -1,0 +1,240 @@
+
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Element Selectors*/
+
+html {
+  font-size: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  padding: 0 2.2rem;
+  margin: 5rem auto 0;
+}
+h1 {
+  padding: 1.75rem;
+  margin: 1.75rem auto;
+  font-size: 2.2rem;
+  font-family: verdana;
+  font-weight: 500;
+  text-align: center;
+}
+h2 {
+    display: flex;
+    color: firebrick;
+    font-family: monospace;
+    font-weight: 100;
+}
+img {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+p {
+  margin: 0 auto 2.35rem auto;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  font-family: verdana;
+}
+a {
+  text-decoration: none;
+}
+/* Get Rid of bullet points */
+ul {
+  list-style: none;
+}
+li {
+  padding: .50rem;
+  text-align: left;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  border-top: solid #00727a 3px;
+}
+
+
+/*Class Selectors*/
+
+/* Container/Wrapper-Div that stores two
+span elements: .num-one and .num-two */
+.num-container {
+  display:flex;
+  flex-direction: column;
+  padding-right: 1rem;
+  border-right: solid 2px black;
+  margin-right: 1rem;
+}
+.num-one {
+  font-size: 1.7rem;
+  color: #00727a;
+}
+.num-two {
+  font-size: 1.2rem;
+  color: grey;
+}
+/* The class selector for every heading
+in each section of the page*/
+.heading {
+  display: inline-block;
+  font-size: 2.25rem;
+  margin-bottom: auto;
+}
+/* The class selector for the wrapper
+that wraps around the <a> and <span>
+that follow after the main header of the
+page. */
+.wrapper {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+}
+/* selector that targets the <span>
+and <a> tags */
+.flex-items {
+  width: 70%;
+  margin: 0 auto;
+  font-family: verdana;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/*ID Selectors*/
+
+/* ID Selector targets the <nav> wrapper
+in the footer that wraps around the
+two unordered lists. */
+#nav-footer {
+  display: flex;
+}
+#animal-ul {
+  font-family: Helvetica;
+  font-size: 1.2rem;
+  margin: 0 0 2rem auto
+}
+#info-ul {
+  width: 40%;
+  font-size: .95rem;
+  margin: 0 auto 2rem 1rem;
+  max-width: 50%;
+}
+/* targets the logo/header in
+the <footer> element */
+#logo {
+  margin: 2.5rem auto 3.5rem;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: cursive;
+  color: orange;
+}
+/* Targets the first half of the logo
+inside the header with the #logo */
+#logo-spruce {
+  font-size: 3.5rem;
+  color: black;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+
+/*Psuedo Classes*/
+
+a:visited {
+  color: orange
+}
+a:hover {
+  color: firebrick;
+  text-decoration: underline;
+}
+/* Targe the first half
+of the logo */
+#logo-spruce:visited {
+  color: black;
+}
+/* Make the links inside the
+second <ul> contained inside the
+footer gray. */
+#info-ul li a:visited, #info-ul li a:link {
+  color: gray;
+}
+/* Target the links inside the first
+unordered list inside the footer before
+and after being clicked on. */
+#animal-ul li a:link {
+  color: firebrick;
+}
+#animal-ul li a:visited {
+  color: coral;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 720px) {
+  main {
+    min-width: 80%;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  /* selector that targets the <span>
+  and <a> tags at that follow the
+  main header of the page*/
+  .flex-items {
+    font-size: 1rem;
+  }
+  .num-one {
+    font-size: 1.9rem;
+  }
+  .num-two {
+    font-size: 1.3rem;
+  }
+  .heading {
+    font-size: 2.45rem;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  main {
+    min-width: 60%;
+  }
+  h1 {
+    font-size: 2.7rem;
+  }
+  /* selector that targets the <span>
+  and <a> tags at that follow the
+  main header of the page*/
+  .flex-items {
+    font-size: 1.1rem;
+  }
+  .num-one {
+    font-size: 2rem;
+  }
+  .num-two {
+    font-size: 1.35rem;
+  }
+  .heading {
+    font-size: 2.82rem;
+  }
+  #animal-ul {
+    font-size: 1.23rem;
+  }
+  #info-ul {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  main {
+    width: 67%;
+  }
+}
